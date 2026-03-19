@@ -33,25 +33,30 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 sm:py-24 border-t border-border">
+    <section className="py-20 sm:py-28 border-t border-border">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center text-2xl font-bold sm:text-3xl">
-          よくある質問
-        </h2>
+        <div className="text-center">
+          <p className="text-sm font-medium tracking-widest text-primary uppercase">
+            FAQ
+          </p>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl lg:text-4xl">
+            よくある質問
+          </h2>
+        </div>
 
         <div className="mt-12 space-y-3">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-xl border border-border bg-surface-light transition hover:border-primary/30"
+              className="rounded-2xl border border-border bg-surface-light/60 backdrop-blur-sm transition hover:border-primary/30"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="flex w-full items-center justify-between p-5 text-left cursor-pointer"
+                className="flex w-full items-center justify-between p-5 sm:p-6 text-left cursor-pointer"
               >
                 <span className="font-medium pr-4">{faq.q}</span>
                 <svg
-                  className={`h-5 w-5 shrink-0 text-text-muted transition-transform ${
+                  className={`h-5 w-5 shrink-0 text-text-muted transition-transform duration-200 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -62,11 +67,15 @@ export default function FAQ() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openIndex === i && (
-                <div className="px-5 pb-5 text-sm text-text-muted leading-relaxed">
+              <div
+                className={`overflow-hidden transition-all duration-200 ${
+                  openIndex === i ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-text-muted leading-relaxed">
                   {faq.a}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

@@ -27,48 +27,64 @@ const rows = [
 
 export default function Impact() {
   return (
-    <section className="py-20 sm:py-28 border-t border-border">
-      <div className="mx-auto max-w-4xl px-6">
-        <p className="text-sm font-medium tracking-widest text-text-muted uppercase">
-          Impact
-        </p>
-        <h2 className="mt-3 text-2xl font-bold sm:text-3xl leading-snug">
-          導入すると、何が変わるか。
-        </h2>
-        <p className="mt-4 text-text-muted max-w-xl">
-          浮いた時間を戦略設計に回す。それだけで運用成果が変わる。
-        </p>
+    <section className="relative py-20 sm:py-28 border-t border-border overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div
+          className="gradient-blob gradient-blob-accent w-[400px] h-[400px] bottom-0 left-[-5%] opacity-[0.06]"
+          style={{ animationDelay: "3s" }}
+        />
+      </div>
 
-        <div className="mt-14 overflow-x-auto">
-          <table className="w-full text-left text-sm">
-            <thead>
-              <tr className="border-b border-border text-text-muted">
-                <th className="pb-3 pr-4 font-medium" />
-                <th className="pb-3 px-4 font-medium">Before</th>
-                <th className="pb-3 px-4 font-medium">After</th>
-                <th className="pb-3 pl-4 font-medium hidden sm:table-cell" />
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => (
-                <tr key={row.label} className="border-b border-border/60">
-                  <td className="py-5 pr-4 font-medium text-text whitespace-nowrap">
-                    {row.label}
-                  </td>
-                  <td className="py-5 px-4 text-text-muted">{row.before}</td>
-                  <td className="py-5 px-4 font-semibold text-accent">
-                    {row.after}
-                  </td>
-                  <td className="py-5 pl-4 text-xs text-text-muted hidden sm:table-cell">
-                    {row.note}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="text-center">
+          <p className="text-sm font-medium tracking-widest text-primary uppercase">
+            Impact
+          </p>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl lg:text-4xl">
+            導入すると、何が変わるか。
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-text-muted">
+            浮いた時間を戦略設計に回す。それだけで運用成果が変わる。
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-px sm:grid-cols-3 rounded-xl overflow-hidden border border-border">
+        <div className="mt-14 rounded-2xl border border-border bg-surface-light/50 backdrop-blur-sm overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-border bg-surface-light/80">
+                  <th className="px-6 py-4 font-medium text-text-muted" />
+                  <th className="px-6 py-4 font-medium text-text-muted">Before</th>
+                  <th className="px-6 py-4 font-medium text-text-muted">After</th>
+                  <th className="px-6 py-4 font-medium text-text-muted hidden sm:table-cell" />
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row, i) => (
+                  <tr
+                    key={row.label}
+                    className={i !== rows.length - 1 ? "border-b border-border/40" : ""}
+                  >
+                    <td className="px-6 py-5 font-medium text-text whitespace-nowrap">
+                      {row.label}
+                    </td>
+                    <td className="px-6 py-5 text-text-muted line-through decoration-text-muted/30">
+                      {row.before}
+                    </td>
+                    <td className="px-6 py-5 font-semibold text-accent">
+                      {row.after}
+                    </td>
+                    <td className="px-6 py-5 text-xs text-text-muted hidden sm:table-cell">
+                      {row.note}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-px sm:grid-cols-3 rounded-2xl overflow-hidden border border-border">
           {[
             { value: "月20時間", desc: "削減できる作業時間" },
             { value: "3〜5倍", desc: "施策の実行回数" },
@@ -76,7 +92,7 @@ export default function Impact() {
           ].map((stat) => (
             <div
               key={stat.desc}
-              className="bg-surface-light px-6 py-8 text-center"
+              className="bg-surface-light/60 backdrop-blur-sm px-6 py-8 text-center"
             >
               <div className="text-2xl font-extrabold text-primary sm:text-3xl">
                 {stat.value}

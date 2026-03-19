@@ -24,31 +24,37 @@ export default function Navbar() {
     } else {
       document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full border-b transition-colors duration-200 ${
+      className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-border/60 bg-surface/90 backdrop-blur-lg"
+          ? "border-border/60 bg-surface/80 backdrop-blur-xl shadow-lg shadow-black/5"
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#" className="text-lg font-bold">
           <span className="text-primary">Meta Ads</span> MCP
         </a>
 
-        <div className="hidden sm:flex items-center gap-6 text-sm text-text-muted">
+        <div className="hidden sm:flex items-center gap-8 text-sm">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-text">
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-text-muted transition hover:text-text"
+            >
               {link.label}
             </a>
           ))}
           <a
             href="#pricing"
-            className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-dark"
+            className="rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-accent-dark shadow-sm"
           >
             導入する
           </a>
@@ -72,7 +78,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="sm:hidden border-t border-border bg-surface/95 backdrop-blur-lg">
+        <div className="sm:hidden border-t border-border bg-surface/95 backdrop-blur-xl">
           <div className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
               <a
