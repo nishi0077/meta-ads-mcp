@@ -51,8 +51,8 @@ export default function Hero() {
               <span className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
               <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
               <span className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
-              <span className="ml-3 text-xs text-text-muted font-mono hidden sm:inline">AI分析レポート — 競合LP診断</span>
-              <span className="ml-3 text-xs text-text-muted font-mono sm:hidden">AI分析レポート</span>
+              <span className="ml-3 text-xs text-text-muted font-mono hidden sm:inline">AI分析レポート — クリエイティブ比較分析</span>
+              <span className="ml-3 text-xs text-text-muted font-mono sm:hidden">クリエイティブ分析</span>
             </div>
 
             <div className="pt-8 sm:pt-10">
