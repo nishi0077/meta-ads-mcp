@@ -13,7 +13,7 @@ export default function FinalCTA() {
         <div className="mt-8">
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-dark hover:shadow-accent/40"
+            className="cta-btn inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white"
           >
             武器を手に入れる
           </a>

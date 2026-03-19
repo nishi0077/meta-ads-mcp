@@ -15,7 +15,7 @@ export default function Hero() {
             すでにMeta広告を回している運用者のための武器
           </div>
 
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl leading-[1.2]">
+          <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl leading-[1.2]" style={{ fontFamily: "var(--font-serif-jp), serif" }}>
             <span className="text-text">広告運用の強者を、</span>
             <br />
             <span className="text-primary">さらに強者に。</span>
@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
               href="#pricing"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-dark hover:shadow-accent/40"
+              className="cta-btn w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white"
             >
               武器を手に入れる
             </a>

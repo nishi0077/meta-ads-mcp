@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import PainPoints from "@/components/PainPoints";
+import Impact from "@/components/Impact";
 import Features from "@/components/Features";
 import TrustSection from "@/components/TrustSection";
 import HowItWorks from "@/components/HowItWorks";
@@ -15,6 +16,7 @@ export default function Home() {
 
       <Hero />
       <PainPoints />
+      <Impact />
       <Features />
       <TrustSection />
       <HowItWorks />
