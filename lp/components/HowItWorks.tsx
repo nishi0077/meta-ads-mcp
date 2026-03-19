@@ -1,21 +1,21 @@
 const steps = [
   {
     num: "01",
-    title: "プランを購入",
+    title: "プランを選んで購入",
     description:
-      "プランを選んで決済するだけ。購入後すぐにGitHubプライベートリポジトリへの招待メールが届きます。",
+      "決済完了と同時に、プロ版リポジトリへのGitHub招待が届く。待ち時間ゼロで即アクセス。",
   },
   {
     num: "02",
-    title: "環境を構築",
+    title: "環境をセットアップ",
     description:
-      "リポジトリをクローンし、pip installで依存パッケージをインストール。.envファイルにMeta App情報を設定します。",
+      "git clone → pip install → .env設定。いつもの開発フローと同じ手順で、15分あれば完了する。",
   },
   {
     num: "03",
-    title: "AIに話しかけて運用開始",
+    title: "あなたの運用が加速する",
     description:
-      "Claude DesktopまたはCursorを起動し、AIに話しかけるだけ。レポート確認から予算変更まで、すべてチャットで完結します。",
+      "Claude DesktopまたはCursorから即座に利用開始。分析も施策実行も、チャットで完結する新しい運用スタイルへ。",
   },
 ];
 
@@ -24,10 +24,10 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 sm:py-24 border-t border-border">
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="text-center text-2xl font-bold sm:text-3xl">
-          <span className="text-primary">3ステップ</span>で始められる
+          導入は<span className="text-primary">15分</span>で完了する
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-text-muted">
-          購入からAI広告運用の開始まで、最短30分で完了します。
+          複雑な設定は不要。普段のワークフローに組み込むだけ。
         </p>
 
         <div className="mt-14 grid gap-8 sm:grid-cols-3">

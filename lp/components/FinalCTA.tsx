@@ -3,11 +3,11 @@ export default function FinalCTA() {
     <section className="py-20 sm:py-24 border-t border-border">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <h2 className="text-2xl font-bold sm:text-3xl">
-          広告マネージャーの<span className="text-primary">作業時間を1/3に</span>しませんか？
+          あなたの運用力を、<span className="text-primary">次のレベル</span>へ。
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-text-muted leading-relaxed">
-          管理画面を行き来する時間を、分析と戦略立案に使えるようになります。
-          14日間の返金保証付きなので、リスクなくお試しいただけます。
+          管理画面の操作時間を戦略設計に変える。
+          すでにスキルがあるあなただからこそ、この差が成果に直結する。
         </p>
 
         <div className="mt-8">
@@ -15,12 +15,12 @@ export default function FinalCTA() {
             href="#pricing"
             className="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-dark hover:shadow-accent/40"
           >
-            今すぐプランを選ぶ
+            武器を手に入れる
           </a>
         </div>
 
         <p className="mt-6 text-xs text-text-muted">
-          14日間返金保証 ・ いつでも解約可能 ・ クレジットカード決済
+          14日間返金保証 ・ いつでも解約可能 ・ Stripe決済で安全
         </p>
       </div>
     </section>

@@ -107,10 +107,12 @@ export default function SuccessPage() {
             セットアップでお困りの場合は、お気軽にお問い合わせください。
           </p>
           <a
-            href="mailto:support@example.com"
+            href="https://github.com/nishi0077/meta-ads-mcp-pro/issues"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex items-center rounded-lg border border-primary/30 px-5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10"
           >
-            サポートに連絡
+            GitHubでサポートを受ける
           </a>
         </div>
       </div>

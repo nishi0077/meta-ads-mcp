@@ -9,21 +9,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Meta Ads MCP Server | AIでMeta広告運用を自動化",
+  title: "Meta Ads MCP Server | 実力ある運用者を、さらに強者にする",
   description:
-    "AIに話しかけるだけでFacebook / Instagram広告の管理・分析が完結。30ツール搭載のMCPサーバーで、レポート確認・クリエイティブ管理・予算変更まですべてチャットで。",
+    "Meta広告運用のスキルに30のAI自動化ツールを掛け合わせる。分析スピード、施策の打ち手、レポート精度。すべてが一段上のレベルになるMCPサーバー。",
   openGraph: {
-    title: "Meta Ads MCP Server | AIでMeta広告運用を自動化",
+    title: "Meta Ads MCP Server | 実力ある運用者を、さらに強者にする",
     description:
-      "広告マネージャーを開かずに、AIとの対話だけでMeta広告を運用。30ツール搭載、ドライランモードで安全操作。",
+      "あなたの広告運用スキルに30のAI自動化ツールを掛け合わせる。チャットで完結する、プロのためのMeta広告運用ツール。",
     type: "website",
     locale: "ja_JP",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meta Ads MCP Server | AIでMeta広告運用を自動化",
+    title: "Meta Ads MCP Server | 実力ある運用者を、さらに強者にする",
     description:
-      "広告マネージャーを開かずに、AIとの対話だけでMeta広告を運用。",
+      "あなたの広告運用スキルに30のAI自動化ツールを掛け合わせる。",
   },
 };
 
