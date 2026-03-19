@@ -50,8 +50,8 @@ export default function SpendChart() {
                 color: "#E2E8F0",
                 fontSize: "13px",
               }}
-              formatter={(value: number) => [
-                `¥${value.toLocaleString()}`,
+              formatter={(value) => [
+                `¥${Number(value).toLocaleString()}`,
                 "広告費",
               ]}
             />

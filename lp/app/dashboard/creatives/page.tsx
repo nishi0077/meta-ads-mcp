@@ -62,7 +62,7 @@ export default function CreativesPage() {
                   color: "#E2E8F0",
                   fontSize: "13px",
                 }}
-                formatter={(value: number) => [`${value}%`, "CTR"]}
+                formatter={(value) => [`${value}%`, "CTR"]}
               />
               <Bar dataKey="CTR" fill="#0668E1" radius={[6, 6, 0, 0]} />
             </BarChart>
