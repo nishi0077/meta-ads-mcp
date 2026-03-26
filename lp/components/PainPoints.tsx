@@ -1,24 +1,24 @@
 const pains = [
   {
     num: "01",
-    headline: "1日の3割、管理画面を眺めている。",
-    body: "打ち手は頭にある。でも数値の確認、設定の変更、ステータスのチェック。管理画面との往復が、戦略を考える時間を奪い続けている。",
+    headline: "広告をクリックした人の22%が、ページに着く前に消えている。",
+    body: "広告はクリックされている。でもページが表示される前に離脱している。この原因を管理画面だけで特定しようとすると、何時間もかかる。",
   },
   {
     num: "02",
-    headline: "レポート作成、毎週2時間。",
-    body: "データを引っ張って、加工して、整形して、共有する。できて当たり前の仕事に、本来使うべき時間が溶けている。",
+    headline: "代理店に毎月20%の手数料を払い続けている。",
+    body: "レポートをもらって、修正を依頼して、返事を待つ。ノウハウは代理店に溜まり、自社には何も残らない。この構造を変えない限り、コストは下がらない。",
   },
   {
     num: "03",
-    headline: "5アカウント × 同じ作業の繰り返し。",
-    body: "ビジネスマネージャーを切り替え、同じ操作を繰り返す。案件が増えるたびに、作業量だけが線形に増えていく。",
+    headline: "同じ商品なのに、獲得単価に4倍の差がある。",
+    body: "あるキャンペーンは¥242、別のキャンペーンは¥928。なぜこんなに差がつくのか？広告の設定か、見せ方か、ターゲットか。原因の特定に時間がかかりすぎている。",
   },
 ];
 
 export default function PainPoints() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-3xl px-6">
         <p className="text-sm font-medium tracking-widest text-text-muted uppercase">
           Bottleneck
@@ -28,7 +28,7 @@ export default function PainPoints() {
           どこに消えている？
         </h2>
 
-        <div className="mt-14 space-y-0">
+        <div className="mt-10 space-y-0">
           {pains.map((item, i) => (
             <div
               key={item.num}

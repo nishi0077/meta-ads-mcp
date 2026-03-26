@@ -10,16 +10,19 @@ function getStripe() {
 interface PlanConfig {
   stripePriceEnv: string;
   mode: "subscription" | "payment";
+  trialDays?: number;
 }
 
 const planConfigs: Record<string, PlanConfig> = {
   monthly: {
     stripePriceEnv: "STRIPE_PRICE_MONTHLY",
     mode: "subscription",
+    trialDays: 7,
   },
   yearly: {
     stripePriceEnv: "STRIPE_PRICE_YEARLY",
     mode: "subscription",
+    trialDays: 7,
   },
   lifetime: {
     stripePriceEnv: "STRIPE_PRICE_LIFETIME",
@@ -72,7 +75,10 @@ export async function POST(request: NextRequest) {
     };
 
     if (config.mode === "subscription") {
-      sessionParams.subscription_data = { metadata };
+      sessionParams.subscription_data = {
+        metadata,
+        ...(config.trialDays ? { trial_period_days: config.trialDays } : {}),
+      };
     }
 
     if (config.mode === "payment") {

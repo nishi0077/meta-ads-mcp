@@ -5,11 +5,12 @@ import { useState } from "react";
 const plans = [
   {
     name: "月額プラン",
-    badge: null,
+    badge: "7日間無料",
     price: 4980,
     priceLabel: "¥4,980",
     priceSuffix: "/月",
-    priceNote: null,
+    priceNote: "最初の7日間は¥0 ― 合わなければ課金前に解約OK",
+    hasTrial: true,
     features: [
       "全30ツール即利用可能",
       "プロ版リポジトリへのアクセス",
@@ -17,17 +18,18 @@ const plans = [
       "セットアップドキュメント",
       "いつでも解約OK",
     ],
-    cta: "まず試してみる",
+    cta: "7日間無料で始める",
     priceId: "monthly",
     highlighted: false,
   },
   {
     name: "年額プラン",
-    badge: "50%OFF",
+    badge: "50%OFF + 7日間無料",
     price: 29800,
     priceLabel: "¥29,800",
     priceSuffix: "/年",
-    priceNote: "月あたり¥2,483 ― 年間¥29,960の差がつく",
+    priceNote: "月あたり¥2,483 ― 7日間無料で試してから決められる",
+    hasTrial: true,
     features: [
       "月額プランの全機能",
       "優先サポート",
@@ -35,7 +37,7 @@ const plans = [
       "Meta API活用Tips集",
       "実質半額で武器を維持",
     ],
-    cta: "年額で導入する",
+    cta: "7日間無料で始める",
     priceId: "yearly",
     highlighted: true,
   },
@@ -46,6 +48,7 @@ const plans = [
     priceLabel: "¥59,800",
     priceSuffix: "（一括）",
     priceNote: "一度の投資で永久に使える武器",
+    hasTrial: false,
     features: [
       "年額プランの全機能",
       "永久アクセス権",
@@ -120,7 +123,7 @@ export default function Pricing() {
             投資対効果で選ぶ
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-text-muted">
-            14日間の返金保証付き。使ってみて合わなければ全額返金。リスクゼロで試せる。
+            月額・年額プランは<strong className="text-text">7日間の無料トライアル付き</strong>。クレカ登録後、7日間は一切課金されません。
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -135,8 +138,12 @@ export default function Pricing() {
               >
                 {plan.badge && (
                   <div
-                    className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1 text-xs font-bold text-white ${
-                      plan.highlighted ? "bg-primary" : "bg-accent"
+                    className={`absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1 text-xs font-bold text-white ${
+                      plan.highlighted
+                        ? "bg-gradient-to-r from-primary to-accent"
+                        : plan.hasTrial
+                          ? "bg-green-500"
+                          : "bg-accent"
                     }`}
                   >
                     {plan.badge}
@@ -193,7 +200,7 @@ export default function Pricing() {
           </div>
 
           <p className="mt-8 text-center text-xs text-text-muted">
-            クレジットカード決済（Stripe）・ 14日間返金保証 ・
+            クレジットカード決済（Stripe）・ 7日間無料トライアル ・
             買い切りプランは永久利用
           </p>
         </div>
@@ -228,6 +235,11 @@ export default function Pricing() {
                     <span className="text-sm text-text-muted">{selectedPlanData.priceSuffix}</span>
                   </span>
                 </div>
+                {selectedPlanData.hasTrial && (
+                  <p className="mt-2 text-xs text-green-400 font-medium">
+                    7日間無料 ― 期間中に解約すれば課金されません
+                  </p>
+                )}
               </div>
             )}
 
@@ -290,7 +302,7 @@ export default function Pricing() {
                   </svg>
                   SSL暗号化
                 </span>
-                <span>14日間返金保証</span>
+                <span>7日間無料トライアル</span>
               </div>
             </div>
           </div>

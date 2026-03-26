@@ -1,27 +1,27 @@
 const rows = [
   {
-    label: "レポート作成",
-    before: "2時間 / 週",
-    after: "12分 / 週",
-    note: "作業時間 1/10",
+    label: "全キャンペーンの比較",
+    before: "管理画面で1件ずつ確認",
+    after: "一言で全体を俯瞰",
+    note: "費用・成果・効率を一括比較",
   },
   {
-    label: "管理画面の操作",
-    before: "1日の30%",
-    after: "チャットで完結",
-    note: "戦略設計に集中",
+    label: "獲得単価の改善",
+    before: "原因の仮説→手動検証→半日",
+    after: "AIが数秒で要因を特定",
+    note: "どの設定が効いているか即判明",
   },
   {
-    label: "アカウント切り替え",
-    before: "手動で1件ずつ",
-    after: "一括横断分析",
-    note: "5件でも1回",
+    label: "ページ離脱の原因分析",
+    before: "複数の分析画面を行き来",
+    after: "チャットで即座に分析",
+    note: "どこで離脱しているか可視化",
   },
   {
-    label: "施策の実行スピード",
-    before: "思いついてから30分",
-    after: "思いついたら即実行",
-    note: "打ち手の数が変わる",
+    label: "週次レポート作成",
+    before: "データ収集→加工→整形 2時間",
+    after: "「先週のレポートを出して」",
+    note: "反応データ込みで12分で完了",
   },
 ];
 
@@ -87,8 +87,8 @@ export default function Impact() {
         <div className="mt-10 grid gap-px sm:grid-cols-3 rounded-2xl overflow-hidden border border-border">
           {[
             { value: "月20時間", desc: "削減できる作業時間" },
-            { value: "3〜5倍", desc: "施策の実行回数" },
-            { value: "ROAS改善", desc: "打ち手が増えた結果" },
+            { value: "クリック率 2.7倍", desc: "AI最適化で広告の反応率が向上" },
+            { value: "獲得単価 74%減", desc: "¥928→¥242への改善実績" },
           ].map((stat) => (
             <div
               key={stat.desc}

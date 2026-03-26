@@ -68,6 +68,15 @@
   animation: slide-in-up 0.6s ease-out both;
 }
 
+.notion-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.notion-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }

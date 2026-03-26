@@ -21,7 +21,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-20 sm:py-28 border-t border-border overflow-hidden">
+    <section id="how-it-works" className="relative py-16 sm:py-20 border-t border-border overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="gradient-blob gradient-blob-primary w-[500px] h-[500px] top-[10%] right-[-10%] opacity-[0.08]" />
       </div>
@@ -39,7 +39,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:grid-cols-3">
           {steps.map((step, i) => (
             <div key={step.num} className="relative">
               {i < steps.length - 1 && (

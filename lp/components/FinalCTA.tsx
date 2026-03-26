@@ -40,7 +40,7 @@ export default function FinalCTA() {
         </div>
 
         <p className="mt-8 text-xs text-text-muted">
-          14日間返金保証 ・ いつでも解約可能 ・ Stripe決済で安全
+          7日間返金保証 ・ いつでも解約可能 ・ Stripe決済で安全
         </p>
       </div>
     </section>

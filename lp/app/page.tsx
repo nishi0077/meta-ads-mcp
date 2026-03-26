@@ -1,13 +1,13 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import PainPoints from "@/components/PainPoints";
-import Impact from "@/components/Impact";
 import Features from "@/components/Features";
 import TrustSection from "@/components/TrustSection";
+import SocialProof from "@/components/SocialProof";
 import HowItWorks from "@/components/HowItWorks";
+import ROICalculator from "@/components/ROICalculator";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
   return (
@@ -17,12 +17,12 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <PainPoints />
-      <Impact />
       <Features />
+      <SocialProof />
       <HowItWorks />
+      <ROICalculator />
       <Pricing />
       <FAQ />
-      <FinalCTA />
 
       <footer className="border-t border-border py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-6">
@@ -66,6 +66,11 @@ export default function Home() {
                     GitHub
                   </a>
                 </li>
+                <li>
+                  <a href="/notes" className="text-text-muted transition hover:text-text">
+                    Note記事プレビュー
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -85,7 +90,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <span className="text-text-muted">14日間返金保証</span>
+                  <span className="text-text-muted">7日間返金保証</span>
                 </li>
               </ul>
             </div>
